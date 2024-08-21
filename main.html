@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고기 굽기 시뮬레이션</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="gameContainer">
+        <!-- 손님 그릇 (1~4개) -->
+        <div id="plateContainer">
+            <div class="plate" id="customer1"></div>
+            <div class="plate" id="customer2"></div>
+            <div class="plate" id="customer3"></div>
+            <div class="plate" id="customer4"></div>
+        </div>
+
+        <!-- 하단 레이아웃 (고기 그릇, 불판, 쓰레기통) -->
+        <div id="bottomRow">
+            <!-- 고기 그릇 -->
+            <div id="meatContainer"></div>
+
+            <!-- 불판 -->
+            <div id="grill">
+                <div class="grill-space" data-index="0"></div>
+                <div class="grill-space" data-index="1"></div>
+                <div class="grill-space" data-index="2"></div>
+                <div class="grill-space" data-index="3"></div>
+                <div class="grill-space" data-index="4"></div>
+                <div class="grill-space" data-index="5"></div>
+                <div class="grill-space" data-index="6"></div>
+                <div class="grill-space" data-index="7"></div>
+                <div class="grill-space" data-index="8"></div>
+                <div class="grill-space" data-index="9"></div>
+            </div>
+
+            <!-- 쓰레기통 -->
+            <div id="trash"></div>
+        </div>
+
+        <!-- 컨트롤 패널 -->
+        <div id="controls">
+            <label for="servingSize">인분 수 선택:</label>
+            <select id="servingSize">
+                <option value="1">1인분</option>
+                <option value="2">2인분</option>
+                <option value="3">3인분</option>
+                <option value="4">4인분</option>
+            </select>
+            <button id="heatButton">불세기: 강불</button>
+            <button id="resetButton">리셋</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
