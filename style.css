@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+#plateContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.plate {
+    width: 180px;
+    height: 180px;
+    background-image: url('customer_plate.png');
+    background-size: cover;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+#bottomRow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    width: 100%;
+}
+
+#meatContainer {
+    width: 350px;
+    height: 250px;
+    background-image: url('meatContainer.png');
+    background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    padding: 10px;
+    position: relative;
+    border: 1px solid #aaa;
+}
+
+.meat {
+    width: 100%;
+    height: 100%;
+    background-image: url('0.raw_meat.png');
+    background-size: cover;
+    cursor: grab;
+}
+
+#grill {
+    width: 500px;
+    height: 300px;
+    background-image: url('grill.png');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #333;
+    position: relative;
+}
+
+.grill-space {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    border: 1px dashed #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#trash {
+    width: 100px;
+    height: 100px;
+    background-image: url('trashcan.png');
+    background-size: cover;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#controls select,
+#controls button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.meat.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
