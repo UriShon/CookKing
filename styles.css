@@ -30,8 +30,8 @@ body {
 }
 
 .plate {
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     background-image: url('customer_plate.png');
     background-size: cover;
     position: relative;
@@ -48,7 +48,7 @@ body {
 
 #meatContainer {
     width: 350px;
-    height: 250px;
+    height: 150px;
     background-image: url('meatContainer.png');
     background-size: cover;
     display: grid;
@@ -63,14 +63,13 @@ body {
 .meat {
     width: 100%;
     height: 100%;
-    background-image: url('0.raw_meat.png');
     background-size: cover;
     cursor: grab;
 }
 
 #grill {
-    width: 500px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
     background-image: url('grill.png');
     background-size: cover;
     display: grid;
