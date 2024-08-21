@@ -31,6 +31,7 @@ function generateMeats(servingSize) {
         meat.setAttribute('draggable', true);
         meat.dataset.index = i;
         meat.dataset.cookingData = JSON.stringify({ bottomTimer: 0, topTimer: 0 });
+        meat.style.backgroundImage = "url('0.raw_meet.png')"; // 고기 이미지 추가
         meatContainer.appendChild(meat); // meatContainer에 고기 요소를 추가합니다.
         meats.push(meat);
     }
