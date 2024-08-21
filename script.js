@@ -1,6 +1,6 @@
 // DOM 요소 선택
-const meatContainer = document.getElementById('meatContainer');
 const grillSpaces = document.querySelectorAll('.grill-space');
+const meatContainer = document.getElementById('meatContainer');
 const trash = document.getElementById('trash');
 const plates = document.querySelectorAll('.plate');
 const servingSizeSelect = document.getElementById('servingSize');
@@ -19,8 +19,8 @@ function init() {
 // 고기 생성 함수
 function generateMeats(servingSize) {
     // 기존 고기 제거
-    meatContainer.innerHTML = '';
-    meats = [];
+    meatContainer.innerHTML = ''; // 기존 고기 요소 초기화
+    meats = []; // 배열 초기화
 
     // 인분당 고기 수 계산 (예: 1인분당 5개)
     const meatCount = servingSize * 5;
@@ -31,7 +31,7 @@ function generateMeats(servingSize) {
         meat.setAttribute('draggable', true);
         meat.dataset.index = i;
         meat.dataset.cookingData = JSON.stringify({ bottomTimer: 0, topTimer: 0 });
-        meatContainer.appendChild(meat);
+        meatContainer.appendChild(meat); // meatContainer에 고기 요소를 추가합니다.
         meats.push(meat);
     }
 }
@@ -49,13 +49,13 @@ function attachEventListeners() {
         space.addEventListener('click', flipMeat);
     });
 
+    trash.addEventListener('dragover', dragOver);
+    trash.addEventListener('drop', dropMeatInTrash);
+
     plates.forEach(plate => {
         plate.addEventListener('dragover', dragOver);
         plate.addEventListener('drop', dropMeatOnPlate);
     });
-
-    trash.addEventListener('dragover', dragOver);
-    trash.addEventListener('drop', dropMeatInTrash);
 
     servingSizeSelect.addEventListener('change', () => {
         generateMeats(parseInt(servingSizeSelect.value));
@@ -125,9 +125,11 @@ function flipMeat(e) {
         meat.classList.toggle('flipped');
 
         if (meat.classList.contains('flipped')) {
-            meat.dataset.side = 'top';
+            stopBottomTimer(meat);
+            startTopTimer(meat);
         } else {
-            meat.dataset.side = 'bottom';
+            stopTopTimer(meat);
+            startBottomTimer(meat);
         }
     }
 }
@@ -155,9 +157,10 @@ function resetGame() {
 
 // 고기 굽기 시작
 function startCooking(meat) {
+    const side = meat.dataset.side || 'bottom';
+
     meat.cookingInterval = setInterval(() => {
         let cookingData = JSON.parse(meat.dataset.cookingData);
-        const side = meat.dataset.side || 'bottom';
 
         cookingData[`${side}Timer`] += 0.1 * heatLevel;
         meat.dataset.cookingData = JSON.stringify(cookingData);
@@ -177,17 +180,17 @@ function updateMeatAppearance(meat, cookingData, side) {
     let imageUrl = '';
 
     if (time < 5) {
-        imageUrl = '0.raw_meat.png';
+        imageUrl = '0.raw_meet.png';
     } else if (time < 10) {
-        imageUrl = '1.medrare_meat.png';
+        imageUrl = '1.medrare_meet.png';
     } else if (time < 15) {
-        imageUrl = '2.medium_meat.png';
+        imageUrl = '2.medium_meet.png';
     } else if (time < 20) {
-        imageUrl = '3.welldone_meat.png';
+        imageUrl = '3.welldone_meet.png';
     } else if (time < 25) {
-        imageUrl = '4.burnt_meat.png';
+        imageUrl = '4.burning_meet.png';
     } else {
-        imageUrl = '5.ash_meat.png';
+        imageUrl = '5.ash_meet.png';
     }
 
     // 뒤집힌 면 처리
@@ -200,4 +203,7 @@ function updateMeatAppearance(meat, cookingData, side) {
 }
 
 // 초기화 실행
-window.onload = init;
+window.onload = function() {
+    init();
+    attachEventListeners();
+};
