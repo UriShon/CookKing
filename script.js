@@ -83,6 +83,7 @@ function serveMeat(e) {
     if (draggedMeat && draggedMeat.classList.contains('meat')) {
         clearInterval(draggedMeat.dataset.intervalId);
         draggedMeat.style.width = '33px'; // 고기를 접시에 올릴 때 크기를 줄임
+        draggedMeat.style.height = '33고기를 접시에 올릴 때 크기를 줄임
         draggedMeat.style.height = '33px';
         e.target.appendChild(draggedMeat);
     }
@@ -138,3 +139,28 @@ function updateMeatImage(meat, cookingData) {
 
     meat.style.backgroundImage = `url(${imageUrl})`;
 }
+
+// 시간과 날짜를 업데이트하는 함수
+function updateTime() {
+    let timeElement = document.querySelector('.date-time');
+    let currentTime = new Date(timeElement.textContent.replace(/월|일|:/g, '').split(' '));
+
+    // 게임 시간: 1시간 = 현실 시간 10분
+    currentTime.setMinutes(currentTime.getMinutes() + 1);
+
+    // 시간 업데이트
+    timeElement.textContent = formatTime(currentTime);
+}
+
+// 시간을 포맷하는 함수
+function formatTime(date) {
+    let hours = String(date.getHours()).padStart(2, '0');
+    let minutes = String(date.getMinutes()).padStart(2, '0');
+    let day = String(date.getDate()).padStart(2, '0');
+    let month = String(date.getMonth() + 1).padStart(2, '0');
+
+    return `${month}월 ${day}일 ${hours}:${minutes}`;
+}
+
+// 시간 업데이트를 일정 간격마다 호출 (게임 시간 1시간 = 현실 시간 10분)
+setInterval(updateTime, 10000); // 10초마다 1분 증가 (현실 시간 10분 = 게임 시간 1시간)
