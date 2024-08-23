@@ -34,13 +34,14 @@
 
 .meat-items {
     position: absolute;
-    width: 300px;
-    height: 150px;
+    width: 240px;  /* Original size */
+    height: 120px; /* Original size */
     left: 80px;
     top: 130px;
     z-index: 6;
     pointer-events: none;
 }
+
 
 .grill-1 {
     width: 700px;
