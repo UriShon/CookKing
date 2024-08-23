@@ -20,11 +20,12 @@
 }
 
 .table-area {
-  position: absolute;
-  left: 0px;
-  top: 530px;
-  width: 100%;
+  background: #000000; /* 검은색 배경 */
+  width: 1440px;
   height: 370px;
+  position: absolute;
+  left: 1px;
+  top: 530px;
 }
 
 .customer-plate-1, .customer-plate-2, .customer-plate-3, .customer-plate-4 {
