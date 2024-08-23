@@ -2,60 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1440, initial-scale=1.0">
-    <title>Meat Cooking Simulation</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Simulation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="inside-withitems">
-        <!-- 배경 이미지 -->
-        <img class="background-basic-1" src="background/background_basic.png" alt="Background" />
-        
-        <!-- 날짜 및 시간 표시 -->
-        <div class="date-time">01월 01일 10:00</div>
+        <!-- Background -->
+        <img class="background-basic-1" src="background/background_basic.png" />
 
-        <!-- 테이블 영역 -->
-        <div class="table-area">
-            <!-- 손님 접시 -->
-            <img class="customer-plate-1" src="images/customer_plate.png" alt="Customer Plate 1" />
-            <img class="customer-plate-2" src="images/customer_plate.png" alt="Customer Plate 2" />
-            <img class="customer-plate-3" src="images/customer_plate.png" alt="Customer Plate 3" />
-            <img class="customer-plate-4" src="images/customer_plate.png" alt="Customer Plate 4" />
-
-            <!-- 고기 컨테이너 -->
-            <img class="meat-container-1" src="images/meatContainer.png" alt="Meat Container" />
-
-            <!-- 쓰레기통 -->
-            <img class="trashcan-1" src="images/trashcan.png" alt="Trash Can" />
-
-            <!-- 불판 -->
-            <img class="grill-1" src="images/grill.png" alt="Grill" />
-
-            <!-- 고기들 -->
-            <div class="meat-items">
-                <!-- 20개의 고기 이미지 생성 -->
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 1" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 2" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 3" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 4" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 5" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 6" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 7" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 8" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 9" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 10" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 11" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 12" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 13" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 14" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 15" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 16" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 17" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 18" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 19" draggable="true" />
-                <img class="meat-item" src="images/0.raw_meet.png" alt="Raw Meat 20" draggable="true" />
-            </div>
+        <!-- Date-Time Display -->
+        <div class="date-time">
+            01월 01일 10:00
         </div>
+
+        <!-- Table Area -->
+        <div class="table-area"></div>
+
+        <!-- Customer Plates -->
+        <img class="customer-plate-1" src="images/customer_plate_1.png" />
+        <img class="customer-plate-2" src="images/customer_plate_2.png" />
+        <img class="customer-plate-3" src="images/customer_plate_3.png" />
+        <img class="customer-plate-4" src="images/customer_plate_4.png" />
+
+        <!-- Meat Container -->
+        <div class="meat-items">
+            <img class="meat-item" id="meat1" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat2" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat3" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat4" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat5" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat6" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat7" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat8" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat9" src="images/0.raw_meet.png" />
+            <img class="meat-item" id="meat10" src="images/0.raw_meet.png" />
+        </div>
+
+        <!-- Grill -->
+        <img class="grill-1" src="images/grill.png" />
+
+        <!-- Trashcan -->
+        <img class="trashcan-1" src="images/trashcan.png" />
+
+        <!-- Function Bar -->
+        <div class="function-bar"></div>
     </div>
 
     <script src="script.js"></script>
