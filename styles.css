@@ -1,144 +1,61 @@
-/* 기본 설정 */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #ffffff;
-    font-family: "NanumGothic-Bold", sans-serif;
-    overflow: hidden;
-}
-
-.inside-withitems {
-    width: 1440px;
-    height: 900px;
-    position: relative;
-    margin: 0 auto;
-}
-
-/* 배경 이미지 */
-.background-basic-1 {
-    width: 1440px;
-    height: 900px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    object-fit: cover;
-    z-index: 1;
-}
-
-/* 날짜 및 시간 표시 */
-.date-time {
-    background: #fed976;
-    border: 5px solid #622c15;
-    border-radius: 20px;
-    width: 300px;
-    height: 50px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    color: #622c15;
-    text-align: center;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 50px;
-    z-index: 10;
-}
-
-/* 테이블 영역 */
 .table-area {
     width: 1440px;
     height: 370px;
     position: absolute;
     left: 0;
     top: 530px;
-    background-color: transparent;
+    background-color: black;
     z-index: 2;
 }
 
-/* 손님 접시 */
-.customer-plate-1,
-.customer-plate-2,
-.customer-plate-3,
-.customer-plate-4 {
+.customer-plate-1, .customer-plate-2, .customer-plate-3, .customer-plate-4 {
     width: 135px;
     height: 120px;
     position: absolute;
-    top: 490px;
+    top: 0px;
     z-index: 3;
 }
 
 .customer-plate-1 {
-    left: 180px;
+    left: 266px;
 }
 
 .customer-plate-2 {
-    left: 450px;
+    left: 528px;
 }
 
 .customer-plate-3 {
-    left: 720px;
+    left: 796px;
 }
 
 .customer-plate-4 {
-    left: 990px;
+    left: 1049px;
 }
 
-/* 고기 컨테이너 */
-.meat-container-1 {
-    width: 600px;
-    height: 200px;
+.meat-items {
     position: absolute;
-    left: 0px;
-    top: 610px;
-    z-index: 4;
+    width: 300px;
+    height: 150px;
+    left: 80px;
+    top: 130px;
+    z-index: 6;
+    pointer-events: none;
 }
 
-/* 쓰레기통 */
-.trashcan-1 {
-    width: 200px;
-    height: 250px;
-    position: absolute;
-    left: 1000px;
-    top: 600px;
-    z-index: 4;
-}
-
-/* 불판 */
 .grill-1 {
-    width: 400px;
+    width: 700px;
     height: 300px;
     position: absolute;
-    left: 520px;
-    top: 580px;
+    left: 350px;
+    top: 100px;
     z-index: 5;
 }
 
-/* 고기들 컨테이너 */
-.meat-items {
+.trashcan-1 {
+    width: 200px;
+    height: 150px;
     position: absolute;
-    width: 600px;
-    height: 200px;
-    left: 0px;
-    top: 610px;
-    z-index: 6;
-    pointer-events: none; /* 고기 컨테이너 클릭 방지 */
-}
-
-/* 개별 고기 아이템 */
-.meat-item {
-    width: 45px; /* 고기 크기를 45px로 조정 */
-    height: 45px;
-    position: absolute;
-    cursor: grab;
-    z-index: 7;
-    pointer-events: auto; /* 고기 개별 클릭 가능 */
-    transition: transform 0.2s;
-}
-
-.meat-item:active {
-    cursor: grabbing;
-    transform: scale(1.1);
+    left: 1000px;
+    top: 130px;
+    z-index: 4;
 }
