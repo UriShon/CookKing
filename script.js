@@ -23,18 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         plate.addEventListener('drop', serveMeat);
     });
 
-    const meatPositions = [
+const meatPositions = [
     { left: '0px', top: '0px' },  // 1st row, 1st column
-    { left: '65px', top: '0px' }, // 1st row, 2nd column
-    { left: '130px', top: '0px' }, // 1st row, 3rd column
-    { left: '195px', top: '0px' }, // 1st row, 4th column
-    { left: '260px', top: '0px' }, // 1st row, 5th column
-    { left: '0px', top: '25px' },  // 2nd row, 1st column
-    { left: '65px', top: '25px' }, // 2nd row, 2nd column
-    { left: '130px', top: '25px' }, // 2nd row, 3rd column
-    { left: '195px', top: '25px' }, // 2nd row, 4th column
-    { left: '260px', top: '25px' }, // 2nd row, 5th column
-    // Add additional positions as needed
+    { left: '55px', top: '0px' }, // 1st row, 2nd column
+    { left: '110px', top: '0px' }, // 1st row, 3rd column
+    { left: '165px', top: '0px' }, // 1st row, 4th column
+    { left: '220px', top: '0px' }, // 1st row, 5th column
+    { left: '0px', top: '30px' },  // 2nd row, 1st column
+    { left: '55px', top: '30px' }, // 2nd row, 2nd column
+    { left: '110px', top: '30px' }, // 2nd row, 3rd column
+    { left: '165px', top: '30px' }, // 2nd row, 4th column
+    { left: '220px', top: '30px' }, // 2nd row, 5th column
 ];
 
 // Apply these positions to each meat item
@@ -44,6 +43,7 @@ meats.forEach((meat, index) => {
         meat.style.top = meatPositions[index].top;
     }
 });
+
     
     function dragStart(e) {
         e.dataTransfer.setData('text/plain', e.target.id);
