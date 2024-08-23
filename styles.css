@@ -1,3 +1,4 @@
+/* 기본 설정 */
 .inside-withitems,
 .inside-withitems * {
   box-sizing: border-box;
@@ -10,96 +11,17 @@
   overflow: hidden;
 }
 
+/* 배경 이미지 */
 .background-basic-1 {
   width: 1440px;
-  height: 900px;
+  height: 822px;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: -128px;
   object-fit: cover;
 }
 
-.table-area {
-  background: #000000; /* 검은색 배경 */
-  width: 1440px;
-  height: 370px;
-  position: absolute;
-  left: 1px;
-  top: 530px;
-}
-
-.customer-plate-1, .customer-plate-2, .customer-plate-3, .customer-plate-4 {
-  width: 135px;
-  height: 108px;
-  position: absolute;
-  object-fit: cover;
-  top: 470px;
-}
-
-.customer-plate-1 { left: 266px; }
-.customer-plate-2 { left: 528px; }
-.customer-plate-3 { left: 796px; }
-.customer-plate-4 { left: 1049px; }
-
-.meat-container-1 {
-  width: 549.53px;
-  height: 250px;
-  position: absolute;
-  left: -50px;
-  top: 611px;
-  object-fit: cover;
-}
-
-.trashcan-1 {
-  width: 245px;
-  height: 250px;
-  position: absolute;
-  left: 1051px;
-  top: 625px;
-  object-fit: cover;
-}
-
-.grill-1 {
-  width: 624.57px;
-  height: 300px;
-  position: absolute;
-  left: 426px;
-  top: 600px;
-  object-fit: cover;
-}
-
-.grill-space,
-.grill-space2,
-.grill-space3,
-.grill-space4,
-.grill-space5 {
-  background: rgba(9, 33, 55, 0.37);
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  top: 644px;
-}
-
-.grill-space { left: 543px; }
-.grill-space2 { left: 626px; }
-.grill-space3 { left: 708px; }
-.grill-space4 { left: 790px; }
-.grill-space5 { left: 872px; }
-
-._0-raw-meet-1, ._0-raw-meet-2, ._0-raw-meet-3, ._0-raw-meet-4, ._0-raw-meet-5,
-._0-raw-meet-6, ._0-raw-meet-7, ._0-raw-meet-8, ._0-raw-meet-9, ._0-raw-meet-10,
-._0-raw-meet-11, ._0-raw-meet-12, ._0-raw-meet-13, ._0-raw-meet-14, ._0-raw-meet-15,
-._0-raw-meet-16, ._0-raw-meet-17, ._0-raw-meet-18, ._0-raw-meet-19, ._0-raw-meet-20 {
-  width: 49.73px;
-  height: 50px;
-  position: absolute;
-  object-fit: cover;
-}
-
-._0-raw-meet-1 { left: 60px; top: 654px; }
-._0-raw-meet-2 { left: 125px; top: 654px; }
-/* 나머지 고기 위치 생략 */
-
+/* 날짜 및 시간 표시 */
 .date-time {
   background: #fed976;
   border-radius: 20px;
@@ -109,15 +31,90 @@
   width: 300px;
   height: 50px;
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;  /* 왼쪽 상단에 배치 */
+  top: 0;
   color: #622c15;
   text-align: center;
   font-family: "NanumGothic-Bold", sans-serif;
   font-size: 32px;
   font-weight: 700;
+  line-height: 50px; /* 수직 중앙 정렬 */
 }
 
+/* 테이블 영역 */
+.table-area {
+  background: #000000;
+  width: 1440px;
+  height: 370px;
+  position: absolute;
+  left: 0;
+  top: 530px;
+}
+
+/* 손님 접시 */
+.customer-plate-1, .customer-plate-2, .customer-plate-3, .customer-plate-4 {
+  width: 135px; /* 크기 조정 */
+  height: 120px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.customer-plate-1 { left: 266px; top: 470px; }
+.customer-plate-2 { left: 528px; top: 470px; }
+.customer-plate-3 { left: 796px; top: 470px; }
+.customer-plate-4 { left: 1049px; top: 470px; }
+
+/* 고기 컨테이너 */
+.meat-container-1 {
+  width: 550px;
+  height: 250px;
+  position: absolute;
+  left: -50px;
+  top: 611px;
+  object-fit: cover;
+}
+
+/* 쓰레기통 */
+.trashcan-1 {
+  width: 245px;
+  height: 250px;
+  position: absolute;
+  left: 1051px;
+  top: 625px;
+  object-fit: cover;
+}
+
+/* 불판 */
+.grill-1 {
+  width: 624px;
+  height: 300px;
+  position: absolute;
+  left: 426px;
+  top: 600px;
+  object-fit: cover;
+}
+
+/* 고기 이미지 */
+._0-raw-meet-1, ._0-raw-meet-2, ._0-raw-meet-3, ._0-raw-meet-4, ._0-raw-meet-5,
+._0-raw-meet-6, ._0-raw-meet-7, ._0-raw-meet-8, ._0-raw-meet-9, ._0-raw-meet-10,
+._0-raw-meet-11, ._0-raw-meet-12, ._0-raw-meet-13, ._0-raw-meet-14, ._0-raw-meet-15,
+._0-raw-meet-16, ._0-raw-meet-17, ._0-raw-meet-18, ._0-raw-meet-19, ._0-raw-meet-20 {
+  width: 45px; /* 고기 크기 조정 */
+  height: 45px;
+  position: absolute;
+  object-fit: cover;
+  z-index: 1; /* 고기 이미지를 앞쪽으로 배치 */
+}
+
+/* 고기의 위치 설정 (예: 1행의 5개 고기) */
+._0-raw-meet-1 { left: 60px; top: 654px; }
+._0-raw-meet-2 { left: 125px; top: 654px; }
+._0-raw-meet-3 { left: 190px; top: 654px; }
+._0-raw-meet-4 { left: 255px; top: 654px; }
+._0-raw-meet-5 { left: 320px; top: 654px; }
+/* 추가 고기 위치 설정 (2행, 3행 등) */
+
+/* 기능 바 */
 .function-bar {
   background: #fed976;
   border-style: solid;
@@ -129,3 +126,18 @@
   left: 0px;
   top: 850px;
 }
+
+/* 불판 영역 설정 (grill-space) */
+.grill-space, .grill-space2, .grill-space3, .grill-space4, .grill-space5 {
+  background: rgba(9, 33, 55, 0.37);
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  /* 각 그릴 스페이스 위치 조정 */
+}
+
+.grill-space { left: 543px; top: 644px; }
+.grill-space2 { left: 626px; top: 644px; }
+.grill-space3 { left: 708px; top: 644px; }
+.grill-space4 { left: 790px; top: 644px; }
+.grill-space5 { left: 872px; top: 644px; }
