@@ -34,18 +34,22 @@
 
 .meat-items {
     position: absolute;
-    width: 240px;  /* Original size */
-    height: 120px; /* Original size */
+    width: 240px; /* Original size of the meat-container */
+    height: 120px; /* Original size of the meat-container */
     left: 80px;
     top: 130px;
     z-index: 6;
     pointer-events: none;
 }
 
+.meat-item {
+    width: 45px; /* Set the meat size to 45px */
+    height: 45px; /* Set the meat size to 45px */
+}
 
 .grill-1 {
-    width: 700px;
-    height: 300px;
+    width: 700px; /* Keep the grill size as is */
+    height: 300px; /* Keep the grill size as is */
     position: absolute;
     left: 350px;
     top: 100px;
@@ -53,10 +57,43 @@
 }
 
 .trashcan-1 {
-    width: 200px;
-    height: 150px;
+    width: 200px; /* Keep the trashcan size as is */
+    height: 150px; /* Keep the trashcan size as is */
     position: absolute;
     left: 1000px;
     top: 130px;
     z-index: 4;
+}
+
+.date-time {
+    background: #fed976;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #622c15;
+    border-width: 5px;
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    left: 0; /* Set to top left corner */
+    top: 0; /* Set to top left corner */
+    color: #622c15;
+    text-align: center;
+    font-family: "NanumGothic-Bold", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    z-index: 7;
+}
+
+.function-bar {
+    background: #fed976;
+    border-style: solid;
+    border-color: #622c15;
+    border-width: 5px;
+    width: 1440px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 850px;
+    z-index: 8;
 }
