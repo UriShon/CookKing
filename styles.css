@@ -63,17 +63,17 @@
   z-index: 3;
 }
 
-.customer-plate-1 { left: 180px; top: 570px; }  /* 적절한 위치로 조정 */
-.customer-plate-2 { left: 450px; top: 570px; }
-.customer-plate-3 { left: 720px; top: 570px; }
-.customer-plate-4 { left: 990px; top: 570px; }
+.customer-plate-1 { left: 180px; top: 490px; }  /* 적절한 위치로 조정 */
+.customer-plate-2 { left: 450px; top: 490px; }
+.customer-plate-3 { left: 720px; top: 490px; }
+.customer-plate-4 { left: 990px; top: 490px; }
 
 /* 고기 컨테이너, 쓰레기통 */
 .meat-container-1 {
   width: 550px;
   height: 200px; /* 도마 높이를 줄여서 table-area 내로 맞춤 */
   position: absolute;
-  left: 50px;
+  left: 0px;
   top: 610px;  /* table-area 내로 맞춤 */
   object-fit: cover;
   z-index: 4;
@@ -83,7 +83,7 @@
   width: 245px;
   height: 250px;
   position: absolute;
-  left: 1130px;
+  left: 1000px;
   top: 610px;  /* table-area 내로 맞춤 */
   object-fit: cover;
   z-index: 4;
