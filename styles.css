@@ -1,123 +1,130 @@
-* {
-    box-sizing: border-box;
-    user-select: none;
-    -webkit-user-drag: none;
+.inside-withitems,
+.inside-withitems * {
+  box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+.inside-withitems {
+  background: #ffffff;
+  height: 900px;
+  position: relative;
+  overflow: hidden;
 }
 
-#gameContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    position: relative;
+.background-basic-1 {
+  width: 1440px;
+  height: 900px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  object-fit: cover;
 }
 
-#plateContainer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
+.table-area {
+  position: absolute;
+  left: 0px;
+  top: 530px;
+  width: 100%;
+  height: 370px;
 }
 
-.plate {
-    width: 150px;
-    height: 150px;
-    background-image: url('customer_plate.png');
-    background-size: cover;
-    position: relative;
-    border: 1px solid #ccc;
+.customer-plate-1, .customer-plate-2, .customer-plate-3, .customer-plate-4 {
+  width: 135px;
+  height: 108px;
+  position: absolute;
+  object-fit: cover;
+  top: 470px;
 }
 
-#bottomRow {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;
-    width: 100%;
+.customer-plate-1 { left: 266px; }
+.customer-plate-2 { left: 528px; }
+.customer-plate-3 { left: 796px; }
+.customer-plate-4 { left: 1049px; }
+
+.meat-container-1 {
+  width: 549.53px;
+  height: 250px;
+  position: absolute;
+  left: -50px;
+  top: 611px;
+  object-fit: cover;
 }
 
-#meatContainer {
-    width: 370px;
-    height: 200px;
-    background-image: url('meatContainer.png');
-    background-size: cover;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
-    padding: 10px;
-    position: relative;
-    border: 1px solid #aaa;
+.trashcan-1 {
+  width: 245px;
+  height: 250px;
+  position: absolute;
+  left: 1051px;
+  top: 625px;
+  object-fit: cover;
 }
 
-.meat {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    cursor: grab;
+.grill-1 {
+  width: 624.57px;
+  height: 300px;
+  position: absolute;
+  left: 426px;
+  top: 600px;
+  object-fit: cover;
 }
 
-#grill {
-    width: 600px; /* 넓이를 늘렸습니다 */
-    height: 300px; /* 그릴의 가로:세로 비율을 조정했습니다 */
-    background-image: url('grill.png');
-    background-size: cover;
-    display: grid;
-    grid-template-columns: repeat(5, 55px); /* grill-space를 위한 설정 */
-    grid-template-rows: repeat(2, 55px); /* grill-space를 위한 설정 */
-    gap: 10px;
-    padding: 10px 40px; /* 좌우 패딩을 추가하여 여백을 만듭니다 */
-    border: 1px solid #333;
-    position: relative;
-    align-items: flex-start; /* 상단 1/2에 위치하도록 조정 */
-    justify-content: center; /* 가운데 정렬 */
+.grill-space,
+.grill-space2,
+.grill-space3,
+.grill-space4,
+.grill-space5 {
+  background: rgba(9, 33, 55, 0.37);
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 644px;
 }
 
-.grill-space {
-    width: 55px;
-    height: 55px;
-    background-color: rgba(0,0,0,0.1);
-    border: 1px dashed #555;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.grill-space { left: 543px; }
+.grill-space2 { left: 626px; }
+.grill-space3 { left: 708px; }
+.grill-space4 { left: 790px; }
+.grill-space5 { left: 872px; }
+
+._0-raw-meet-1, ._0-raw-meet-2, ._0-raw-meet-3, ._0-raw-meet-4, ._0-raw-meet-5,
+._0-raw-meet-6, ._0-raw-meet-7, ._0-raw-meet-8, ._0-raw-meet-9, ._0-raw-meet-10,
+._0-raw-meet-11, ._0-raw-meet-12, ._0-raw-meet-13, ._0-raw-meet-14, ._0-raw-meet-15,
+._0-raw-meet-16, ._0-raw-meet-17, ._0-raw-meet-18, ._0-raw-meet-19, ._0-raw-meet-20 {
+  width: 49.73px;
+  height: 50px;
+  position: absolute;
+  object-fit: cover;
 }
 
-#trash {
-    width: 120px; /* 크기를 키움 */
-    height: 120px;
-    background-image: url('trashcan.png');
-    background-size: cover;
-    border: 1px solid #ccc;
-    cursor: pointer;
+._0-raw-meet-1 { left: 60px; top: 654px; }
+._0-raw-meet-2 { left: 125px; top: 654px; }
+/* 나머지 고기 위치 생략 */
+
+.date-time {
+  background: #fed976;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #622c15;
+  border-width: 5px;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  color: #622c15;
+  text-align: center;
+  font-family: "NanumGothic-Bold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
 }
 
-#controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-#controls select,
-#controls button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.meat.dragging {
-    opacity: 0.5;
-    cursor: grabbing;
+.function-bar {
+  background: #fed976;
+  border-style: solid;
+  border-color: #622c15;
+  border-width: 5px;
+  width: 1440px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 850px;
 }
