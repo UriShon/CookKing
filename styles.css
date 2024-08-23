@@ -63,18 +63,18 @@
   z-index: 3;
 }
 
-.customer-plate-1 { left: 266px; top: 470px; }
-.customer-plate-2 { left: 528px; top: 470px; }
-.customer-plate-3 { left: 796px; top: 470px; }
-.customer-plate-4 { left: 1049px; top: 470px; }
+.customer-plate-1 { left: 180px; top: 570px; }  /* 적절한 위치로 조정 */
+.customer-plate-2 { left: 450px; top: 570px; }
+.customer-plate-3 { left: 720px; top: 570px; }
+.customer-plate-4 { left: 990px; top: 570px; }
 
 /* 고기 컨테이너, 쓰레기통 */
 .meat-container-1 {
   width: 550px;
-  height: 250px;
+  height: 200px; /* 도마 높이를 줄여서 table-area 내로 맞춤 */
   position: absolute;
-  left: -50px;
-  top: 611px;
+  left: 50px;
+  top: 610px;  /* table-area 내로 맞춤 */
   object-fit: cover;
   z-index: 4;
 }
@@ -83,8 +83,8 @@
   width: 245px;
   height: 250px;
   position: absolute;
-  left: 1051px;
-  top: 625px;
+  left: 1130px;
+  top: 610px;  /* table-area 내로 맞춤 */
   object-fit: cover;
   z-index: 4;
 }
@@ -94,8 +94,8 @@
   width: 624px;
   height: 300px;
   position: absolute;
-  left: 426px;
-  top: 600px;
+  left: 408px;
+  top: 610px;  /* table-area 내로 맞춤 */
   object-fit: cover;
   z-index: 5;
 }
@@ -111,3 +111,8 @@
   object-fit: cover;
   z-index: 6; /* 고기 이미지를 가장 앞쪽으로 배치 */
 }
+
+/* 고기 이미지 위치 조정 */
+._0-raw-meet-1 { left: 70px; top: 620px; }
+._0-raw-meet-2 { left: 140px; top: 620px; }
+/* 나머지 고기 위치들도 적절히 조정 */
