@@ -1,57 +1,67 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고기 굽기 시뮬레이션</title>
+    <meta name="viewport" content="width=1440, initial-scale=1.0">
+    <title>Meat Cooking Simulation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="inside-withitems">
+        <img class="background-basic-1" src="background/background_basic.png" />
+        
+        <!-- 날짜 및 시간 표시 -->
+        <div class="date-time">01월 01일 10:00</div>
 
-    <div id="gameContainer">
-        <!-- 손님 그릇 (1~4개) -->
-        <div id="plateContainer">
-            <div class="plate" id="customer1"></div>
-            <div class="plate" id="customer2"></div>
-            <div class="plate" id="customer3"></div>
-            <div class="plate" id="customer4"></div>
-        </div>
-
-        <!-- 하단 레이아웃 (고기 그릇, 불판, 쓰레기통) -->
-        <div id="bottomRow">
+        <!-- Table Area -->
+        <div class="table-area">
+            <!-- 손님 그릇 -->
+            <img class="customer-plate-1" src="images/customer_plate.png" />
+            <img class="customer-plate-2" src="images/customer_plate.png" />
+            <img class="customer-plate-3" src="images/customer_plate.png" />
+            <img class="customer-plate-4" src="images/customer_plate.png" />
+            
             <!-- 고기 그릇 -->
-            <div id="meatContainer"></div>
+            <img class="meat-container-1" src="images/meatContainer.png" />
 
             <!-- 불판 -->
-            <div id="grill">
-                <div class="grill-space" data-index="0"></div>
-                <div class="grill-space" data-index="1"></div>
-                <div class="grill-space" data-index="2"></div>
-                <div class="grill-space" data-index="3"></div>
-                <div class="grill-space" data-index="4"></div>
-                <div class="grill-space" data-index="5"></div>
-                <div class="grill-space" data-index="6"></div>
-                <div class="grill-space" data-index="7"></div>
-                <div class="grill-space" data-index="8"></div>
-                <div class="grill-space" data-index="9"></div>
-            </div>
-
+            <img class="grill-1" src="images/grill.png" />
+            
             <!-- 쓰레기통 -->
-            <div id="trash"></div>
+            <img class="trashcan-1" src="images/trashcan.png" />
+            
+            <!-- 고기들 -->
+            <img class="_0-raw-meet-1" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-2" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-3" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-4" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-5" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-6" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-7" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-8" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-9" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-10" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-11" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-12" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-13" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-14" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-15" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-16" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-17" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-18" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-19" src="images/0.raw_meet.png" />
+            <img class="_0-raw-meet-20" src="images/0.raw_meet.png" />
+
+            <!-- Grill spaces -->
+            <div class="grill-space"></div>
+            <div class="grill-space2"></div>
+            <div class="grill-space3"></div>
+            <div class="grill-space4"></div>
+            <div class="grill-space5"></div>
         </div>
 
-        <!-- 컨트롤 패널 -->
-        <div id="controls">
-            <label for="servingSize">인분 수 선택:</label>
-            <select id="servingSize">
-                <option value="1">1인분</option>
-                <option value="2">2인분</option>
-                <option value="3">3인분</option>
-                <option value="4">4인분</option>
-            </select>
-            <button id="heatButton">불세기: 강불</button>
-            <button id="resetButton">리셋</button>
-        </div>
+        <!-- 기능 버튼 -->
+        <div class="function-bar"></div>
     </div>
 
     <script src="script.js"></script>
